@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Models | PT. Panji Rama Otomotif</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Multi-CSS Setup: Global/Home CSS first, then Models-specific CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="models.css">
+</head>
+<body id="models-page">
+
+    <!-- Navbar (Sama persis dengan Home) -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/proputih.png" style="width: 150px;" alt="logo promotor">
+            </a>
+
+            <div class="d-none d-lg-flex position-absolute start-50 translate-middle-x">
+                <img src="assets/LOGOSTAR-WHITE.png" style="width: 45px;" alt="logo star">
+            </div>
+
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <img src="assets/LOGOSTAR-WHITE.png" style="width: 30px;" alt="logo star">
+                <button class="navbar-toggler border-0 shadow-none text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars fs-4"></i>
+                </button>
+            </div>
+        
+           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="models.html">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Models Container Section -->
+    <section class="py-5 my-3">
+        <div class="container" style="max-width: 1000px;">
+            <div class="text-center mb-5">
+                <h1 class="models-page-header">Mercedes-Benz Line-up</h1>
+                <p class="text-muted">Pilih kategori kendaraan mewah impian Anda untuk melihat detail unit dan penawaran.</p>
+            </div>
+
+            <!-- Accordion List for Each Model Category -->
+            <div class="accordion" id="modelsAccordion">
+
+                <!-- 1. Saloon (12 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSaloon">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaloon" aria-expanded="true" aria-controls="collapseSaloon">
+                            Saloon
+                        </button>
+                    </h2>
+                    <div id="collapseSaloon" class="accordion-collapse collapse show" aria-labelledby="headingSaloon" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <!-- Generate 12 Cars (3 per row) -->
+                                <script>
+                                    const saloonCars = [
+                                        {name: "The A 200 Sedan Progressive Line", price: "Rp 1,040,000,000", img: "assets/A-CLASS.png"},
+                                        {name: "The C 200 Avantgarde Line", price: "Rp 1,260,000,000", img: "assets/C-CLASS.png"},
+                                        {name: "The C 300 AMG Line", price: "Rp 1,465,000,000", img: "assets/C-300-AMG.png"},
+                                        {name: "The E 200 Exclusive Line", price: "Rp 1,480,000,000", img: "assets/E-CLASS.png"},
+                                        {name: "The E 300 AMG Line", price: "Rp 1,845,000,000", img: "assets/E-300-AMG-Line.png"},
+                                        {name: "The S 450 4Matic Luxury", price: "Rp 2,965,000,000", img: "assets/S-CLASS.png"},
+                                        {name: "The EQE 350+", price: "Rp 2,250,000,000", img: "assets/EQE.png"},
+                                        {name: "The EQS 450+ Electric Art Line", price: "Rp 2,984,000,000", img: "assets/EQS-450-Art-Line.png"},
+                                        {name: "The EQS 450+ AMG Line", price: "Rp 3,410,000,000", img: "assets/EQS-AMG-Line.png"},
+                                        {name: "The EQS 500 4Matic", price: "Rp 3,950,000,000", img: "assets/EQS.png"},
+                                        {name: "Mercedes-Maybach S 580", price: "Rp 6,700,000,000", img: "assets/MAYBACH-S-CLASS.png"},
+                                        {name: "Mercedes-AMG A 35 4Matic", price: "Rp 1,285,000,000", img: "assets/AMG-A-35.png"}
+                                    ];
+                                    saloonCars.forEach(car => {
+                                        document.write(`
+                                            <div class="col-md-4">
+                                                <div class="car-card">
+                                                    <div>
+                                                        <img src="${car.img}" class="img-fluid" alt="${car.name}" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=Mercedes-Benz'">
+                                                        <h5 class="car-title">${car.name}</h5>
+                                                        <p class="car-price">${car.price}</p>
+                                                    </div>
+                                                    <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20${encodeURIComponent(car.name)}" target="_blank" class="btn-order-now">Order Now</a>
+                                                </div>
+                                            </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Electric Vehicles (10 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEV">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEV" aria-expanded="false" aria-controls="collapseEV">
+                            Electric Vehicles
+                        </button>
+                    </h2>
+                    <div id="collapseEV" class="accordion-collapse collapse" aria-labelledby="headingEV" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <script>
+                                    const evCars = [
+                                        {name: "The EQB 250 Progressive Line", price: "Rp 1,650,000,000", img: "assets/EQB-250.png"},
+                                        {name: "The EQE 350+", price: "Rp 2,250,000,000", img: "assets/EQE.png"},
+                                        {name: "The EQE 350+ SUV", price: "Rp 2,550,000,000", img: "assets/EQE-SUV.png"},
+                                        {name: "The EQS 450+ Electric Art Line", price: "Rp 2,984,000,000", img: "assets/EQS-450-Art-Line.png"},
+                                        {name: "The EQS 450+ AMG Line", price: "Rp 3,410,000,000", img: "assets/EQS-AMG-Line.png"},
+                                        {name: "The EQS 500 4Matic", price: "Rp 3,950,000,000", img: "assets/EQS.png"},
+                                        {name: "The EQS 680 Maybach SUV", price: "Rp 7,800,000,000", img: "assets/MAYBACH-EQS.png"},
+                                        {name: "The EQS SUV 450 4Matic", price: "Rp 3,600,000,000", img: "assets/EQS-SUV.png"},
+                                        {name: "Mercedes-AMG EQE 53 4Matic+", price: "Rp 3,950,000,000", img: "assets/EQE.png"},
+                                        {name: "The G 580 with EQ Technology", price: "Rp 6,500,000,000", img: "assets/G-580.png"}
+                                    ];
+                                    evCars.forEach(car => {
+                                        document.write(`
+                                            <div class="col-md-4">
+                                                <div class="car-card">
+                                                    <div>
+                                                        <img src="${car.img}" class="img-fluid" alt="${car.name}" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=Mercedes-Benz+EV'">
+                                                        <h5 class="car-title">${car.name}</h5>
+                                                        <p class="car-price">${car.price}</p>
+                                                    </div>
+                                                    <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20${encodeURIComponent(car.name)}" target="_blank" class="btn-order-now">Order Now</a>
+                                                </div>
+                                            </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SUV's (15 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSUV">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSUV" aria-expanded="false" aria-controls="collapseSUV">
+                            SUV's
+                        </button>
+                    </h2>
+                    <div id="collapseSUV" class="accordion-collapse collapse" aria-labelledby="headingSUV" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <script>
+                                    const suvCars = [
+                                        {name: "The GLA 200 AMG Line", price: "Rp 1,020,000,000", img: "assets/AMG-GLA-35.png"},
+                                        {name: "The GLB 200 Progressive Line", price: "Rp 1,150,000,000", img: "assets/EQB-250.png"},
+                                        {name: "The GLC 200 4Matic AMG Line", price: "Rp 1,475,000,000", img: "assets/EQE-SUV.png"},
+                                        {name: "The GLC 300 4Matic Coupe", price: "Rp 1,780,000,000", img: "assets/EQS-SUV.png"},
+                                        {name: "The GLE 450 4Matic AMG Line", price: "Rp 2,250,000,000", img: "assets/EQE-SUV.png"},
+                                        {name: "The GLS 450 4Matic Luxury", price: "Rp 2,750,000,000", img: "assets/EQS-SUV.png"},
+                                        {name: "Mercedes-AMG G 63", price: "Rp 7,500,000,000", img: "assets/G-580.png"},
+                                        {name: "The EQB 250", price: "Rp 1,650,000,000", img: "assets/EQB-250.png"},
+                                        {name: "The EQE 350+ SUV", price: "Rp 2,550,000,000", img: "assets/EQE-SUV.png"},
+                                        {name: "The EQS SUV 450 4Matic", price: "Rp 3,600,000,000", img: "assets/EQS-SUV.png"},
+                                        {name: "Mercedes-AMG GLA 35", price: "Rp 1,350,000,000", img: "assets/AMG-GLA-35.png"},
+                                        {name: "Mercedes-AMG GLB 35", price: "Rp 1,480,000,000", img: "assets/AMG-GLA-35.png"},
+                                        {name: "Mercedes-AMG GLC 43 Coupe", price: "Rp 2,450,000,000", img: "assets/EQE-SUV.png"},
+                                        {name: "Mercedes-AMG GLE 53", price: "Rp 2,980,000,000", img: "assets/EQS-SUV.png"},
+                                        {name: "Mercedes-Maybach GLS 600", price: "Rp 7,300,000,000", img: "assets/MAYBACH-EQS.png"}
+                                    ];
+                                    suvCars.forEach(car => {
+                                        document.write(`
+                                            <div class="col-md-4">
+                                                <div class="car-card">
+                                                    <div>
+                                                        <img src="${car.img}" class="img-fluid" alt="${car.name}" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=Mercedes-Benz+SUV'">
+                                                        <h5 class="car-title">${car.name}</h5>
+                                                        <p class="car-price">${car.price}</p>
+                                                    </div>
+                                                    <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20${encodeURIComponent(car.name)}" target="_blank" class="btn-order-now">Order Now</a>
+                                                </div>
+                                            </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. MPV (1 Car) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMPV">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMPV" aria-expanded="false" aria-controls="collapseMPV">
+                            MPV
+                        </button>
+                    </h2>
+                    <div id="collapseMPV" class="accordion-collapse collapse" aria-labelledby="headingMPV" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="car-card">
+                                        <div>
+                                            <img src="assets/E-CLASS.png" class="img-fluid" alt="Mercedes-Benz V-Class" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=V-Class'">
+                                            <h5 class="car-title">The V 250 Avantgarde Line</h5>
+                                            <p class="car-price">Rp 3,150,000,000</p>
+                                        </div>
+                                        <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20The%20V%20250%20Avantgarde%20Line" target="_blank" class="btn-order-now">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Coupé (2 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCoupe">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoupe" aria-expanded="false" aria-controls="collapseCoupe">
+                            Coupé
+                        </button>
+                    </h2>
+                    <div id="collapseCoupe" class="accordion-collapse collapse" aria-labelledby="headingCoupe" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="car-card">
+                                        <div>
+                                            <img src="assets/C-300-AMG.png" class="img-fluid" alt="CLE 300 Coupe" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=CLE+Coupe'">
+                                            <h5 class="car-title">The CLE 300 4Matic Coupe AMG Line</h5>
+                                            <p class="car-price">Rp 1,850,000,000</p>
+                                        </div>
+                                        <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20The%20CLE%20300%20Coupe" target="_blank" class="btn-order-now">Order Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="car-card">
+                                        <div>
+                                            <img src="assets/AMG-A-35.png" class="img-fluid" alt="AMG GT Coupe" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=AMG+GT+Coupe'">
+                                            <h5 class="car-title">Mercedes-AMG GT 55 4Matic+</h5>
+                                            <p class="car-price">Rp 4,100,000,000</p>
+                                        </div>
+                                        <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20Mercedes-AMG%20GT%2055" target="_blank" class="btn-order-now">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Cabriolet (1 Car) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCabriolet">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCabriolet" aria-expanded="false" aria-controls="collapseCabriolet">
+                            Cabriolet
+                        </button>
+                    </h2>
+                    <div id="collapseCabriolet" class="accordion-collapse collapse" aria-labelledby="headingCabriolet" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="car-card">
+                                        <div>
+                                            <img src="assets/C-CLASS.png" class="img-fluid" alt="AMG SL 43" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=AMG+SL+43'">
+                                            <h5 class="car-title">Mercedes-AMG SL 43 Cabriolet</h5>
+                                            <p class="car-price">Rp 3,250,000,000</p>
+                                        </div>
+                                        <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20Mercedes-AMG%20SL%2043" target="_blank" class="btn-order-now">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Mercedes-AMG (4 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingAMG">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAMG" aria-expanded="false" aria-controls="collapseAMG">
+                            Mercedes-AMG
+                        </button>
+                    </h2>
+                    <div id="collapseAMG" class="accordion-collapse collapse" aria-labelledby="headingAMG" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <script>
+                                    const amgCars = [
+                                        {name: "Mercedes-AMG A 35 4Matic", price: "Rp 1,285,000,000", img: "assets/AMG-A-35.png"},
+                                        {name: "Mercedes-AMG GLA 35", price: "Rp 1,350,000,000", img: "assets/AMG-GLA-35.png"},
+                                        {name: "Mercedes-AMG GT 55 4Matic+", price: "Rp 4,100,000,000", img: "assets/C-300-AMG.png"},
+                                        {name: "Mercedes-AMG G 63", price: "Rp 7,500,000,000", img: "assets/G-580.png"}
+                                    ];
+                                    amgCars.forEach(car => {
+                                        document.write(`
+                                            <div class="col-md-4">
+                                                <div class="car-card">
+                                                    <div>
+                                                        <img src="${car.img}" class="img-fluid" alt="${car.name}" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=Mercedes-AMG'">
+                                                        <h5 class="car-title">${car.name}</h5>
+                                                        <p class="car-price">${car.price}</p>
+                                                    </div>
+                                                    <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20${encodeURIComponent(car.name)}" target="_blank" class="btn-order-now">Order Now</a>
+                                                </div>
+                                            </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Mercedes-Maybach (3 Cars) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMaybach">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMaybach" aria-expanded="false" aria-controls="collapseMaybach">
+                            Mercedes-Maybach
+                        </button>
+                    </h2>
+                    <div id="collapseMaybach" class="accordion-collapse collapse" aria-labelledby="headingMaybach" data-bs-parent="#modelsAccordion">
+                        <div class="accordion-body px-4 py-4">
+                            <div class="row g-4">
+                                <script>
+                                    const maybachCars = [
+                                        {name: "Mercedes-Maybach S 580", price: "Rp 6,700,000,000", img: "assets/MAYBACH-S-CLASS.png"},
+                                        {name: "Mercedes-Maybach GLS 600", price: "Rp 7,300,000,000", img: "assets/MAYBACH-EQS.png"},
+                                        {name: "Mercedes-Maybach EQS 680 SUV", price: "Rp 7,800,000,000", img: "assets/MAYBACH-EQS.png"}
+                                    ];
+                                    maybachCars.forEach(car => {
+                                        document.write(`
+                                            <div class="col-md-4">
+                                                <div class="car-card">
+                                                    <div>
+                                                        <img src="${car.img}" class="img-fluid" alt="${car.name}" onerror="this.src='https://placehold.co/400x250/f8f9fa/212529?text=Mercedes-Maybach'">
+                                                        <h5 class="car-title">${car.name}</h5>
+                                                        <p class="car-price">${car.price}</p>
+                                                    </div>
+                                                    <a href="https://wa.me/6281234567890?text=Halo%20PT.%20Panji%20Rama%20Otomotif,%20saya%20tertarik%20untuk%20Order%20Now%20unit%20${encodeURIComponent(car.name)}" target="_blank" class="btn-order-now">Order Now</a>
+                                                </div>
+                                            </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Sama persis dengan Home) -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 PT. Panji Rama Otomotif. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Cek apakah ada hash di URL (contoh: models.html#saloon)
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1); // ambil kata setelah '#'
+            
+            // Mapping hash dari home ke target collapse ID di models.html
+            const mapping = {
+                'saloon': 'collapseSaloon',
+                'electric': 'collapseEV',
+                'suv': 'collapseSUV',
+                'mpv': 'collapseMPV',
+                'coupe': 'collapseCoupe',
+                'cabriolet': 'collapseCabriolet',
+                'amg': 'collapseAMG',
+                'maybach': 'collapseMaybach'
+            };
+
+            const collapseTargetId = mapping[targetId];
+            if (collapseTargetId) {
+                // Tutup default accordion pertama (Saloon) kalau yang diminta bukan saloon
+                const defaultShow = document.getElementById('collapseSaloon');
+                if (defaultShow && targetId !== 'saloon') {
+                    defaultShow.classList.remove('show');
+                    // Ganti state button utamanya jadi collapsed
+                    const defaultBtn = document.querySelector('[data-bs-target="#collapseSaloon"]');
+                    if(defaultBtn) defaultBtn.classList.add('collapsed');
+                }
+
+                // Buka accordion yang sesuai dengan target hash
+                const targetCollapse = document.getElementById(collapseTargetId);
+                if (targetCollapse) {
+                    targetCollapse.classList.add('show');
+                    const targetBtn = document.querySelector(`[data-bs-target="#${collapseTargetId}"]`);
+                    if (targetBtn) {
+                        targetBtn.classList.remove('collapsed');
+                        targetBtn.setAttribute('aria-expanded', 'true');
+                    }
+
+                    // Scroll otomatis dengan mulus ke elemen tersebut
+                    setTimeout(() => {
+                        targetCollapse.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 200);
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

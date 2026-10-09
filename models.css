@@ -1,0 +1,110 @@
+/* ==========================================================
+   MODELS PAGE SPECIFIC STYLING (models.css)
+   ========================================================== */
+
+.models-page-header {
+    font-family: 'MBCorpoATittleCond-Regular', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+/* Accordion Custom Styling mimicking the reference image */
+.accordion-item {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 0 !important;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.accordion-button {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 18px 24px;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fdfdfd !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Custom Icon Toggle (+ / -) using Bootstrap icon or pseudo elements */
+.accordion-button::after {
+    background-image: none !important;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f067"; /* Plus icon */
+    font-size: 0.9rem;
+    color: #555;
+    transition: transform 0.2s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "\f068"; /* Minus icon when expanded */
+    color: #1a1a1a;
+}
+
+/* Car Card Grid Styling */
+.car-card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-card img {
+    max-height: 170px;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.04);
+}
+
+.car-title {
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.car-price {
+    font-size: 0.95rem;
+    color: #444444;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+/* Order Now Button Styling matching the reference */
+.btn-order-now {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-order-now:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    transform: translateY(-1px);
+}

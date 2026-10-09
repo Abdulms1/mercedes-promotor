@@ -1,0 +1,194 @@
+/* ==========================================================
+   CONTACT US PAGE SPECIFIC STYLING (contact.css)
+   ========================================================== */
+
+/* Hero Banner Section */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.contact-hero img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* Lebar area gradient di sebelah kiri */
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+.contact-hero-content {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    color: #ffffff;
+    max-width: 550px;
+    z-index: 2; /* Supaya posisinya di atas gradient overlay */
+}
+.contact-hero-title {
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    /* Tambahan text-shadow yang kuat biar tulisan makin tajam */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.contact-hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+    /* Text-shadow untuk deskripsi */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Section Containers & Boxes */
+.contact-section-container {
+    padding: 3rem 0;
+}
+
+.contact-section-title {
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-main-box {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.08); /* Soft shadow tajam & elegan */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Contact Item Column */
+.contact-channel-item {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-channel-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.channel-icon {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.channel-title {
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.channel-info {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.channel-info strong {
+    color: #1a1a1a;
+}
+
+/* Action Button */
+.btn-contact-action {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-contact-action:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Dealer Map Card */
+.dealer-map-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dealer-map-body {
+    padding: 1.5rem;
+}
+
+.dealer-map-title {
+    font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.dealer-address {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-hero-content {
+        left: 5%;
+        bottom: 10%;
+        padding-right: 5%;
+    }
+    .contact-hero-title {
+        font-size: 2rem;
+    }
+    .contact-main-box {
+        padding: 2rem 1.5rem;
+        margin: 0 15px;
+    }
+}

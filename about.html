@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | PT. Panji Rama Otomotif</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Multi-CSS Setup: Global/Home CSS first, then About-specific CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body id="about-page">
+
+    <!-- Navbar (Konsisten dengan Home & Models) -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/proputih.png" style="width: 150px;" alt="logo promotor">
+            </a>
+
+            <div class="d-none d-lg-flex position-absolute start-50 translate-middle-x">
+                <img src="assets/LOGOSTAR-WHITE.png" style="width: 45px;" alt="logo star">
+            </div>
+
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <img src="assets/LOGOSTAR-WHITE.png" style="width: 30px;" alt="logo star">
+                <button class="navbar-toggler border-0 shadow-none text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars fs-4"></i>
+                </button>
+            </div>
+        
+           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="models.html">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <section class="about-hero">
+        <img src="assets/banner2.jpg" alt="About Us Banner" onerror="this.src='https://placehold.co/1920x800/1a1a1a/ffffff?text=About+Us+Banner'">
+        <div class="about-hero-content">
+            <h1 class="about-hero-title">About Us</h1>
+            <p class="about-hero-desc">
+                As an Authorized Dealership of Mercedes-Benz, PRO Motor is committed to delivering a premium ownership experience that goes beyond the vehicle itself. For us, it is about quality, trust, and building long-term relationships with every customer.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Section: Company Profile & Dealer Photos -->
+    <section class="about-content-section">
+        <div class="container py-3">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 about-text">
+                    <p>
+                        PT. Panji Rama Otomotif (PRO Motor) was established in 1997 in Simprug, South Jakarta, and has grown into a trusted Mercedes-Benz dealer in Indonesia[cite: 6]. Appointed as an Authorized Mercedes-Benz UNIMOG dealer in 2010 and granted Dealer Exclusivity in 2014 now known as Mercedes-Benz Certified Pre-Owned, PRO Motor currently operates two dealerships across Jakarta and Tangerang, covering passenger cars, and certified pre-owned units[cite: 6].
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3 dealer-img-container">
+                        <div class="col-6">
+                            <img src="assets/Gedung-bsd.jpeg" class="img-fluid w-100" alt="Pro-Motor BSD" onerror="this.src='https://placehold.co/400x300/e9ecef/212529?text=Pro-Motor+BSD'">
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/Gedung-gandaria.jpeg" class="img-fluid w-100" alt="Pro-Motor Gandaria" onerror="this.src='https://placehold.co/400x300/e9ecef/212529?text=Pro-Motor+Gandaria'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="about-section-container">
+        <div class="container text-center">
+            <h2 class="about-section-title">Vision & Mission</h2>
+            <div class="content-box text-start">
+                <div class="mb-4">
+                    <h4 class="box-subheading">Our Vision</h4>
+                    <p class="box-text">
+                        Become a dependable and trustworthy premium vehicle company in sales and after sales service.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="box-subheading">Our Mission</h4>
+                    <p class="box-text">
+                        Become a responsible Mercedes-Benz dealer with qualified human resources and able to provide full-hearted services to the customer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Value Section -->
+    <section class="about-section-container">
+        <div class="container text-center">
+            <h2 class="about-section-title">Our Value</h2>
+            <div class="content-box text-start">
+                <h4 class="box-subheading">Value</h4>
+                <ul class="value-list">
+                    <li>Actively provide a swift, precise, and thorough services, as well as to serve with uncompromised honesty and integrity.</li>
+                    <li>To provide and preserve and acclaimed respect towards the customer full heartedly.</li>
+                    <li>High quality and high serving spirit, as well as maintaining the work environment to become a pleasant and productive one.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Owner & Leadership Section -->
+    <section class="about-section-container">
+        <div class="container text-center">
+            <h2 class="about-section-title">Our Owner & Leadership</h2>
+            <div class="content-box text-start">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-3 mb-lg-0">
+                        <h4 class="box-subheading">Owner</h4>
+                        <h3 style="font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif; font-size: 1.5rem; font-weight: 500; color: #1a1a1a; margin-bottom: 0.75rem;">Jongkie D. Sugiarto</h3>
+                        <p class="box-text mb-0">
+                            Founder and owner of this Mercedes-Benz promoter dealership, bringing extensive experience in the automotive industry and a strong vision to build a business rooted in trust, professionalism, and premium service excellence.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <img src="assets/Bpk-Jongkie-Sugiharto-32.jpeg" class="owner-img" alt="Jongkie D. Sugiarto" onerror="this.src='https://placehold.co/300x350/e9ecef/212529?text=Jongkie+D.+Sugiarto'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Achievements Section -->
+    <section class="about-section-container">
+        <div class="container text-center">
+            <h2 class="about-section-title">Awards & Achievements</h2>
+            <div class="content-box text-start mb-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-3 mb-lg-0">
+                        <h3 class="box-subheading">DEALER OF THE YEAR 2021</h3>
+                        <p class="box-text mb-0">
+                            An acknowledgment of excellence in sales performance, service quality, and customer satisfaction, demonstrating our continued commitment to Mercedes-Benz premium standards.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="assets/DOY-2022.jpg" class="img-fluid rounded shadow-sm" alt="Dealer of the Year 2021" onerror="this.src='https://placehold.co/400x250/e9ecef/212529?text=Dealer+2021'">
+                    </div>
+                </div>
+            </div>
+            <div class="content-box text-start">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-3 mb-lg-0">
+                        <h3 class="box-subheading">DEALER OF THE YEAR 2017</h3>
+                        <p class="box-text mb-0">
+                            A recognition of strong foundation, operational excellence, and consistent performance as a trusted Mercedes-Benz dealer.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="assets/DOY-2017.jpg" class="img-fluid rounded shadow-sm" alt="Dealer of the Year 2017" onerror="this.src='https://placehold.co/400x250/e9ecef/212529?text=Dealer+2017'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Showroom & Facilities Carousel Section -->
+    <section class="about-section-container pb-5">
+        <div class="container text-center">
+            <h2 class="about-section-title">Our Showroom & Facilities</h2>
+            <div class="content-box p-3">
+                <div id="facilityCarousel" class="carousel slide showroom-carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/WhatsApp-Image-2026-01-26-at-13.37.45.jpeg" class="d-block w-100 rounded" alt="Showroom Facility 1" onerror="this.src='https://placehold.co/900x500/1a1a1a/ffffff?text=Showroom+Facility+1'">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/bca-expo-2026_web_home-banner_1890x806-1.jpg" class="d-block w-100 rounded" alt="Showroom Facility 2" onerror="this.src='https://placehold.co/900x500/1a1a1a/ffffff?text=Showroom+Facility+2'">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/l-intro-1681848026.jpg" class="d-block w-100 rounded" alt="Showroom Facility 3" onerror="this.src='https://placehold.co/900x500/1a1a1a/ffffff?text=Showroom+Facility+3'">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#facilityCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#facilityCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Konsisten dengan Home & Models) -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 PT. Panji Rama Otomotif. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

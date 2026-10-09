@@ -1,0 +1,317 @@
+        :root {
+            --bg-dark: #000000;
+            --text-gold: #c5a880;
+            --card-gray: #6c757d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #212529;
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: 'MBCorpoATittleCond-Regular';
+            src: url('fonts/MBCorpoATitleCond-Regular.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+
+
+        /* Navbar Styling matching screenshot */
+        .navbar-custom {
+            background-color: var(--bg-dark);
+            padding: 1.2rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-custom .navbar-brand {
+            font-family: 'Cinzel', serif;
+            color: #ffffff;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-custom .nav-link {
+            color: #8c929d !important;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link.active {
+            color: #ffffff !important;
+        }
+
+        /* Main Carousel (10 seconds interval) */
+        /* Main Carousel (Rasio 16:9 agar tidak terpotong) */
+.hero-carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rasio 16:9 (9 / 16 = 56.25%) */
+    overflow: hidden;
+}
+
+.hero-carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Memastikan gambar tampil utuh tanpa terpotong */
+    filter: brightness(0.9);
+}
+
+
+        /* Models Section */
+
+        /* Mengurangi jarak vertikal antar baris model mobil agar lebih compact */
+        .models-section-row, 
+        #models .row.align-items-center {
+            margin-bottom: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+/* Mengatur ulang padding section models secara keseluruhan */
+        #models {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+        .models-header {
+            font-family: 'MBCorpoATittleCond-Regular', sans-serif;
+            font-weight: 500;
+            color: #1a1a1a;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        .model-title {
+            font-family: 'MBCorpoATittleCond-Regular', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 300;
+            color: #1a1a1a;
+        }
+
+        .model-desc {
+            color: #555555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+
+        .banner-section {
+           position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding-bottom: 37.5%; /* Rasio 1920:720 */
+            overflow: hidden;
+            background-color: #000;
+}
+
+        .banner-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Custom Show More Button */
+        .btn-custom-dark {
+            background-color: #636e72;
+            color: #ffffff;
+            border: none;
+            padding: 0.55rem 1.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom-dark:hover {
+            background-color: #2d3436;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Sub-carousels styling */
+        .sub-carousel img {
+            max-height: 280px;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #000000;
+            color: #777777;
+            font-size: 0.85rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .carousel, .carousel-inner {
+            position: relative;
+            width: 100%;
+        }
+        /* CSS untuk memaksa aspect ratio 16:9 pada Carousel Item */
+.carousel-item-fixed-ratio {
+  position: relative;
+  width: 100%;
+  /* Teknik padding-bottom untuk menjaga rasio aspect (9 / 16 = 0.5625 = 56.25%) */
+  padding-bottom: 56.25%; 
+  overflow: hidden; /* Memastikan gambar yang keluar tidak terlihat */
+}
+
+.carousel-item-fixed-ratio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gunakan 'object-fit: cover;' agar gambar mengisi penuh area tanpa terdistorsi,
+     atau gunakan 'object-fit: contain;' jika gambar harus terlihat seluruhnya meski ada ruang kosong (letterboxing) */
+  object-fit: contain; 
+}
+
+/* ------------------------------------------------------------- /
+/ TAMBAHAN CSS UNTUK LAYOUT OUR SERVICES (ZIG-ZAG 7 FOTO) & MAPS /
+/ ------------------------------------------------------------- */
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 30px;
+}
+
+.service-card {
+position: relative;
+border-radius: 4px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+background: #000;
+}
+
+.service-card img {
+width: 100%;
+height: 380px;
+object-fit: cover;
+transition: transform 0.6s ease;
+opacity: 0.9;
+}
+
+.service-card:hover img {
+transform: scale(1.03);
+opacity: 1;
+}
+
+/* Kartu pertama dibuat memanjang ke bawah (vertikal besar) */
+.service-card-large {
+grid-row: span 2;
+}
+
+.service-card-large img {
+height: 790px; /* Menyesuaikan tinggi 2 grid sejajar */
+}
+
+/* Kartu terakhir full width (span 2 kolom) */
+.service-card-full {
+grid-column: span 2;
+}
+
+.service-card-full img {
+height: 420px;
+}
+
+/* Teks judul di atas gambar (overlay bawah kiri) */
+.service-caption {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 25px;
+background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+}
+
+.service-title {
+font-family: 'MBCorpoATittleCond-Regular', 'Cinzel', serif;
+color: #ffffff;
+font-size: 1.4rem;
+font-weight: 400;
+letter-spacing: 0.5px;
+margin: 0;
+text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Responsif untuk layar mobile / tablet kecil */
+@media (max-width: 992px) {
+.services-grid {
+grid-template-columns: 1fr;
+}
+.service-card-large {
+grid-row: span 1;
+}
+.service-card-large img,
+.service-card img {
+height: 300px;
+}
+.service-card-full {
+grid-column: span 1;
+}
+}
+
+
+
+    /*    @media (min-width: 992px) and (max-width: 1200px) {
+     Mengatur jarak menu sebelah kanan agar tidak terlalu dekat dengan tengah 
+        .navbar-nav {
+        gap: 1rem !important; 
+        }*/
+    /* Memperkecil sedikit ukuran logo tengah khusus di rentang layar iPad/tablet besar 
+        .navbar .position-absolute img {
+            width: 35px !important;
+        }
+        }*/
